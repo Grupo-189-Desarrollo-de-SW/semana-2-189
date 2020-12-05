@@ -1,27 +1,6 @@
-body{
-    font-family: sans-serif;
-    max-width:  1200px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.container-API{
-    background-color: #27057d;
-    box-shadow: 4px 4px 4px 4px rgba(39, 5, 125, 0.2);
-}
-
-.container-movie{
-    background-color: #ededed;
-    border: 10px solid #27057d;
-    border-radius: 20px;
-}
-
-hr{
-    height: 1px; 
-    color: white;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    padding-top: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+body {
+  font-family: sans-serif;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
 }
