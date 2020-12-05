@@ -3,6 +3,8 @@
 
     <!-- Header -->
 
+    <page-header> </page-header>
+
     <!-- Fin del Header -->
 
     <!-- Seccion API -->
@@ -24,6 +26,9 @@
 
 export default {
   name: 'App',
+  components:{
+      PageHeader
+  }
 }
 </script>
 
