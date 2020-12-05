@@ -8,7 +8,7 @@
     <!-- Seccion API -->
 
     <!-- Fin seccion API -->
-
+    <APICard></APICard>
     <!-- Sección de Equipo -->
 
     <!-- Fin sección Equipo -->
@@ -22,8 +22,13 @@
 
 <script>
 
+import APICard from "./components/APICard.vue"
+
 export default {
   name: 'App',
+  components:{
+    APICard
+    }
 }
 </script>
 
