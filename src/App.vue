@@ -34,6 +34,7 @@
 <script>
 import axios from "axios";
 import APICard from "./components/APICard.vue";
+import PageHeader from './components/PageHeader.vue';
 
 export default {
   name: "App",
