@@ -11,9 +11,10 @@
     <!-- Fin seccion API -->
     <div class="container-fluid my-4 container-API" id="news">
       <h2 style="color: white;text-align:center;">Peliculas</h2>
-      <hr width="100%" />
+      <hr width="100%" style="color: white" />
       <div class="row mt-md-5 mt-sm-5 mt-xs-5">
-        <div class="col-lg-6 col-xs-12 container-movie"
+        <div
+          class="col-lg-6 col-xs-12 container-movie"
           v-for="item in moviesFull"
           :key="item.id"
         >
@@ -22,11 +23,15 @@
       </div>
     </div>
     <!-- Sección de Equipo -->
-         <div class="container-fluid container-miembros">
-      <h2 style="color: white;text-align:center;">Equipo</h2>
+    <div class="container-fluid container-miembros" id="team">
+      <h2 style="color: black;text-align:center;">Equipo</h2>
       <hr width="100%" />
       <div class="row justify-content-center mb-5">
-        <div class="col mt-5 ancho-minimo" v-for="item in members" :key="item.id">
+        <div
+          class="col mt-5 ancho-minimo"
+          v-for="item in members"
+          :key="item.id"
+        >
           <team-card :member="item"></team-card>
         </div>
       </div>
@@ -42,60 +47,60 @@
 <script>
 import axios from "axios";
 import APICard from "./components/APICard.vue";
-import PageHeader from './components/PageHeader.vue';
-import TeamCard from './components/TeamCard.vue'
+import PageHeader from "./components/PageHeader.vue";
+import TeamCard from "./components/TeamCard.vue";
 
 export default {
   name: "App",
-  data() {
-    return {
-      moviesFull: [],
-    };
-  },
   components: {
     APICard,
     PageHeader,
     TeamCard,
   },
-  data(){
+  data() {
     return {
-      members: [{
-        codigo : 1 ,
-        nombre : 'Gustavo García L.' ,
-        descripcion : 'Ingeniero de sistemas, desarrollador Full Stack, Laravel, Node, Git, JS, JAVA.' ,
-        rol : 'Desarrollador FullStack' ,
-        image : require('../public/images/Gustavo.jpg')
-      },
-      {
-        codigo : 2 ,
-        nombre : 'Carlos Galindez' ,
-        descripcion : 'Analista de interfaz de usuario, UI, UX, Bootstrap.' ,
-        rol : 'Desarrollador Frontend' ,
-        image : require('../public/images/Carlos.png')
-      },
-      {
-        codigo : 3 ,
-        nombre : 'Juan J Neira' ,
-        descripcion : 'Data Analyst, css, js, html, php, py developer.' ,
-        rol : 'Desarrollador backend' ,
-        image : require('../public/images/juanneira.jpg')
-      },
-      {
-        codigo : 4 ,
-        nombre : 'David Hernández' ,
-        descripcion : 'Business Consultant, success projector, finance advisor.' ,
-        rol : 'Desarrollador de Negocios' ,
-        image : require('../public/images/fotodave.jpg')
-      },
-      {
-        codigo : 5 ,
-        nombre : 'Carlos Gutierrez' ,
-        descripcion : 'Wireframe planner, UX, UI designer.' ,
-        rol : 'Desarrollador Frontend' ,
-        image : require('../public/images/carlos-gutierrez.jpg')
-      }]
-      }
-    },
+      moviesFull: [],
+      members: [
+        {
+          codigo: 1,
+          nombre: "Gustavo García L.",
+          descripcion:
+            "Ingeniero de sistemas, desarrollador Full Stack, Laravel, Node, Git, JS, JAVA.",
+          rol: "Desarrollador FullStack",
+          image: require("../public/images/Gustavo.jpg"),
+        },
+        {
+          codigo: 2,
+          nombre: "Carlos Galindez",
+          descripcion: "Analista de interfaz de usuario, UI, UX, Bootstrap.",
+          rol: "Desarrollador Frontend",
+          image: require("../public/images/Carlos.png"),
+        },
+        {
+          codigo: 3,
+          nombre: "Juan J Neira",
+          descripcion: "Data Analyst, css, js, html, php, py developer.",
+          rol: "Desarrollador backend",
+          image: require("../public/images/juanneira.jpg"),
+        },
+        {
+          codigo: 4,
+          nombre: "David Hernández",
+          descripcion:
+            "Business Consultant, success projector, finance advisor.",
+          rol: "Desarrollador de Negocios",
+          image: require("../public/images/fotodave.jpg"),
+        },
+        {
+          codigo: 5,
+          nombre: "Carlos Gutierrez",
+          descripcion: "Wireframe planner, UX, UI designer.",
+          rol: "Desarrollador Frontend",
+          image: require("../public/images/carlos-gutierrez.jpg"),
+        },
+      ],
+    };
+  },
   methods: {
     extraerPeliculas() {
       const apiKey = "39dddcd1";
@@ -137,7 +142,6 @@ export default {
 }
 hr {
   height: 1px;
-  color: white;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   padding-top: 0px;
