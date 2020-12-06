@@ -2,6 +2,8 @@
   <div id="app">
     <!-- Header -->
 
+    <page-header> </page-header>
+
     <!-- Fin del Header -->
 
     <!-- Seccion API -->
@@ -42,6 +44,7 @@ export default {
   },
   components: {
     APICard,
+    PageHeader,
   },
   methods: {
     extraerPeliculas() {
