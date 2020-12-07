@@ -56,6 +56,7 @@
 
     <!-- Sección Footer -->
 
+    <footer-card :members="members"></footer-card>
     <!-- Fin sección Footer -->
   </div>
 </template>
@@ -66,6 +67,7 @@ import APICard from "./components/APICard.vue";
 import PageHeader from "./components/PageHeader.vue";
 import TeamCard from "./components/TeamCard.vue";
 import ServiceCard from "./components/ServiceCard.vue";
+import FooterCard from "./components/FooterCard";
 
 export default {
   name: "App",
@@ -74,6 +76,7 @@ export default {
     PageHeader,
     TeamCard,
     ServiceCard,
+    FooterCard,
   },
   data() {
     return {
@@ -82,6 +85,9 @@ export default {
         {
           codigo: 1,
           nombre: "Gustavo García L.",
+          nombres: "Gustavo Adolfo",
+          apellidos: "García Londoño",
+          email: "gustavogarcia@utp.edu.co",
           descripcion:
             "Ingeniero de sistemas, desarrollador Full Stack, Laravel, Node, Git, JS, JAVA.",
           rol: "Desarrollador FullStack",
@@ -90,6 +96,9 @@ export default {
         {
           codigo: 2,
           nombre: "Carlos Galindez",
+          nombres: "Carlos Alfredo",
+          apellidos: "Galindez Muñoz",
+          email: "alfredgalindez@gmail.com",
           descripcion: "Analista de interfaz de usuario, UI, UX, Bootstrap.",
           rol: "Desarrollador Frontend",
           image: require("../public/images/Carlos.png"),
@@ -97,6 +106,9 @@ export default {
         {
           codigo: 3,
           nombre: "Juan J Neira",
+          nombres: "Juan José",
+          apellidos: "Neira Cote",
+          email: "juanjneira@gmail.com",
           descripcion: "Data Analyst, css, js, html, php, py developer.",
           rol: "Desarrollador backend",
           image: require("../public/images/juanneira.jpg"),
@@ -106,17 +118,22 @@ export default {
           nombre: "David Hernández",
           descripcion:
             "Business Consultant, success projector, finance advisor.",
+          nombres: "David Esteban",
+          apellidos: "Hernández Garzón",
+          email: "daves1998@hotmail.com",
           rol: "Desarrollador de Negocios",
           image: require("../public/images/fotodave.jpg"),
         },
         {
           codigo: 5,
           nombre: "Carlos Gutierrez",
+          nombres: "Carlos Andrés",
+          apellidos: "Gutiérrez Cruz",
+          email: "contacto10@gmail.com",
           descripcion: "Wireframe planner, UX, UI designer.",
           rol: "Desarrollador Frontend",
           image: require("../public/images/carlos-gutierrez.jpg"),
-
-  },
+        },
       ],
 
       services: [
@@ -193,17 +210,15 @@ hr {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.container-movie{
+.container-movie {
   background-color: #ededed;
   border: 10px solid #27057d;
   border-radius: 20px;
 }
 
-.container-service .container-movie{
+.container-service .container-movie {
   background-color: #ededed;
   border: 10px solid #27057d;
   border-radius: 20px;
 }
-
-
 </style>
