@@ -117,11 +117,11 @@ export default {
           codigo: 4,
           nombre: "David Hernández",
           descripcion:
-            "Business Consultant, success projector, finance advisor.",
+            "Ingeniero de Sonido, desarrollador Backend, Python, Java, Juce, Matlab.",
           nombres: "David Esteban",
           apellidos: "Hernández Garzón",
           email: "daves1998@hotmail.com",
-          rol: "Desarrollador de Negocios",
+          rol: "Desarrollador Backend",
           image: require("../public/images/fotodave.jpg"),
         },
         {
